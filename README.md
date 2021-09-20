@@ -8,7 +8,7 @@ side-toy project based on koa framework
 `$ cd koa-server`
 `$ yarn init --y`
 
-yarn init v1.22.11<br>
+>yarn init v1.22.11<br>
 question name (koa-server):<br>
 question version (1.0.0):<br>
 question description:<br>
@@ -23,16 +23,17 @@ success Saved package.json<br>
 press enter and enter and enter ...
 
 ##### 2
-`$ yarn add koa`
-`$ yarn add koa-router`
-`$ yarn add koa-bodyparser`
+`$ yarn add koa`<br>
+`$ yarn add koa-router`<br>
+`$ yarn add koa-bodyparser`<br>
+<br><br>
 
-`$ yarn add -D typescript`
-`$ yarn add -D ts-node`
-`$ yarn add -D nodemon`
-`$ yarn add -D @types/koa`
-`$ yarn add -D @types/koa-router`
-`$ yarn add -D @types/koa-bodyparser`
+`$ yarn add -D typescript`<br>
+`$ yarn add -D ts-node`<br>
+`$ yarn add -D nodemon`<br>
+`$ yarn add -D @types/koa`<br>
+`$ yarn add -D @types/koa-router`<br>
+`$ yarn add -D @types/koa-bodyparser`<br>
 
 <strong>node version should now low (> 12.0.0)</strong>
 
