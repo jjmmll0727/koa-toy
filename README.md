@@ -8,17 +8,17 @@ side-toy project based on koa framework
 `$ cd koa-server`
 `$ yarn init --y`
 
-yarn init v1.22.11
-question name (koa-server):
-question version (1.0.0):
-question description:
-question entry point (index.js):
-question repository url:
-question author:
-question license (MIT):
-question private:
-success Saved package.json
-✨  Done in 7.08s.
+yarn init v1.22.11<br>
+question name (koa-server):<br>
+question version (1.0.0):<br>
+question description:<br>
+question entry point (index.js):<br>
+question repository url:<br>
+question author:<br>
+question license (MIT):<br>
+question private:<br>
+success Saved package.json<br>
+✨  Done in 7.08s.<br>
 
 press enter and enter and enter ...
 
