@@ -48,8 +48,8 @@ press enter and enter and enter ...
 
 ### structure
 - models : virtual mongodb to control well
-- controller 
-- service : crucial function to activate in controller dir
+- controller : receive request and send response with using services logic
+- service : crucial function to activate in controller dir & access to database directly
 
 
 
