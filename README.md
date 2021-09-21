@@ -46,3 +46,9 @@ press enter and enter and enter ...
 `$ tsc --init` -> make tsconfig.json file
 
 
+### structure
+- models : virtual mongodb to control well
+- controller 
+- service : crucial function to activate in controller dir
+
+
