@@ -52,5 +52,38 @@ press enter and enter and enter ...
 - service : crucial function to activate in controller dir & access to database directly
 
 
+#### notice
+
+```ts
+try{
+    const {userId, password} = ctx.request.body;
+    const user : any = await findUserById(userId) 
+    const result = await bcrypt.compare(password, user.password);
+    if(!result){
+        ctx.body = {
+            exceptions: "",
+            status: 500,
+            error: false,
+            message: "wrong pw",
+            };     
+    }
+    const token = await sign(result)
+    ctx.body = {
+        exceptions: "",
+        status: 200,
+        error: true,
+        message: "success to loign",
+        token: token
+        };
+        return;
+        
+```
+
+- status 500 ctx.body will be `overwritten` by status 200 ctx.body
+- ctx.body does not stop functin like return would do
+- must comment return below ctv.body like `status 200 ctx.body`
+- [https://github.com/koajs/discussions/issues/12](https://github.com/koajs/discussions/issues/12)
+
+
 
 
