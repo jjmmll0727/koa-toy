@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import jwtConfig from '../config/jwtKey';
+import jwtConfig from '../../config/jwtKey';
 const TOKEN_EXPIRED = -3;
 const TOKEN_INVALID = -2;
 

@@ -50,7 +50,7 @@ press enter and enter and enter ...
 - models : virtual mongodb to control well
 - controller : receive request and send response with using services logic
 - service : crucial function to activate in controller dir & access to database directly
-
+- interface : for DTO for post http method
 
 #### notice
 

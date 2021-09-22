@@ -35,5 +35,7 @@ router.use('/api', api.routes())
 app.use(router.routes());
 
 app.listen(port, ()=> {
-	console.log(`Koa server is listening on port ${port}`);
+	console.log(`#########################################
+        🛡️  Server listening on port: ${port} 🛡️
+        ##########################################`);
 });

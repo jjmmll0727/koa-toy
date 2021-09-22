@@ -1,16 +1,19 @@
 import User from '../models/User';
+import { IUserForRegister, IUserForFindUser } from '../interface/IUser';
 
-export const register =  async(userId: String, password: String, name: String) => {    
+export const register =  async(data : IUserForRegister) => {    
 
-    return User.create({
-        userId,
-        password,
-        name
-    })
+    // return User.create({
+    //     data
+    // }) 이렇게 하면 안되는 이유가...?
+
+    const newUser = new User(data); 
+    return newUser.save();
 }
 
-export const findUserById = async(userId: String) => {
-    return User.findOne({userId : userId});
+export const findUserById = async(data : IUserForFindUser) => {
+    const {userId} = data
+    return User.findOne({userId});
 }
 
 
