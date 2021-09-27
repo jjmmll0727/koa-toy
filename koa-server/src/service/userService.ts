@@ -1,7 +1,7 @@
 import User from '../models/User';
 import { IUserForRegister, IUserForFindUser } from '../interface/IUser';
 
-export const register =  async(data : IUserForRegister) => {    
+export async function register(data : IUserForRegister){    
 
     // return User.create({
     //     data
@@ -11,7 +11,7 @@ export const register =  async(data : IUserForRegister) => {
     return newUser.save();
 }
 
-export const findUserById = async(data : IUserForFindUser) => {
+export async function findUserById(data : IUserForFindUser){
     const {userId} = data
     return User.findOne({userId});
 }

@@ -28,8 +28,8 @@ export async function addUser(ctx : RouterContext, next: any){
                 status: 400,
                 error: false,
                 message: "이미 회원가입한 사람입니다. ",
-              };
-              return;
+            };
+            return;
         }else{
             const salt = await bcrypt.genSalt(10);
             const hashPW = await bcrypt.hash(password, salt);

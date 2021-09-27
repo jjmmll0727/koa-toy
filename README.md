@@ -1,5 +1,7 @@
 # koa-toy
 side-toy project based on koa framework
+원하는 지역의 날씨를 골라서 볼 수 있는 나만의 프로젝트
+***
 
 ### env setting
 
@@ -52,6 +54,12 @@ press enter and enter and enter ...
 - service : crucial function to activate in controller dir & access to database directly
 - interface : for DTO for post http method
 
+
+### skills
+***
+1. crawling
+
+
 #### notice
 
 ```ts
@@ -84,6 +92,4 @@ try{
 - must comment return below ctv.body like `status 200 ctx.body`
 - [https://github.com/koajs/discussions/issues/12](https://github.com/koajs/discussions/issues/12)
 
-
-
-
+<br><br><br>

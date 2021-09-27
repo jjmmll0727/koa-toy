@@ -1,7 +1,7 @@
 import Koa from 'koa';
 import Router from 'koa-router';
 import bodyparser from 'koa-bodyparser';
-import api from './api'
+import api from './routes'
 
 const app = new Koa();
 const router = new Router();
@@ -30,9 +30,9 @@ router.get('/', async (ctx) => {
     ctx.body = 'koa-toy-side-project is starting~';
 });
 
+app.use(router.routes());
 router.use('/api', api.routes())
 
-app.use(router.routes());
 
 app.listen(port, ()=> {
 	console.log(`#########################################
