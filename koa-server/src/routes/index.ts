@@ -7,7 +7,7 @@ const router = new Router();
 
 
 router.use('/user', user.routes())
-router.use('/region', region.routes())
+router.use('/region', checkToken, region.routes())
 
 
 

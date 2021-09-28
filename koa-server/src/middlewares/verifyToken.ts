@@ -39,7 +39,6 @@ export async function checkToken(ctx: RouterContext, next: any){
         };
         return;
     }    
-    ctx.request.body = user;
     return next();
 }
 // export const verifyToken = {

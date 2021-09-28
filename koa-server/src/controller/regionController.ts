@@ -14,7 +14,6 @@ import { RouterContext } from '@koa/router';
 export async function storeRegion(ctx: RouterContext, next: any){
     try{
         const {province, city} : IRegionForStore = ctx.request.body
-        console.log(province, city)
         const error = validationResults(ctx);
         if(error.hasErrors()){
             ctx.status = 500;
