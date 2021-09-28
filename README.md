@@ -1,11 +1,14 @@
 # koa-toy
-side-toy project based on koa framework
-원하는 지역의 날씨를 골라서 볼 수 있는 나만의 프로젝트
+side-toy project based on koa framework<br>
+원하는 지역의 날씨를 골라서 볼 수 있는 나만의 프로젝트 `with docker`<br>
+날씨와 그 지역의 사진을 배경으로 한 음악 플레이리스트 -> 감성적이야
 ***
 
-### env setting
+> ### env setting
 
 ##### 1
+***
+
 `$ mkdir koa-server`
 `$ cd koa-server`
 `$ yarn init --y`
@@ -25,6 +28,8 @@ success Saved package.json<br>
 press enter and enter and enter ...
 
 ##### 2
+***
+
 `$ yarn add koa`<br>
 `$ yarn add koa-router`<br>
 `$ yarn add koa-bodyparser`<br>
@@ -44,21 +49,24 @@ press enter and enter and enter ...
 [here](https://phoenixnap.com/kb/update-node-js-version)
 
 ##### 3
+***
 
 `$ tsc --init` -> make tsconfig.json file
 
 
-### structure
+> ### structure
 - models : virtual mongodb to control well
 - controller : receive request and send response with using services logic
 - service : crucial function to activate in controller dir & access to database directly
 - interface : for DTO for post http method
 
 
-### skills
+> ### skills
 ***
-1. crawling
+1. crawling weather from [https://www.estesparkweather.net/index.php](https://www.estesparkweather.net/index.php)
 
+
+***
 
 #### notice
 

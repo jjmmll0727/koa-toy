@@ -4,7 +4,7 @@ import {sign, verify} from '../modules/jwt'
 import { query, validationResults} from "koa-req-validation";
 import { IRegionForStore } from '../interface/IRegion';
 import { RouterContext } from '@koa/router';
-
+import { scrap } from '../modules/scrap';
 /**
  * 
  * @param ctx province & city
@@ -33,6 +33,7 @@ export async function storeRegion(ctx: RouterContext, next: any){
             return;
         }
         const regions = await register({province, city});
+        const weather = await scrap(city);
         ctx.body = {
             exceptions: "",
             status: 200,
@@ -41,7 +42,7 @@ export async function storeRegion(ctx: RouterContext, next: any){
         };
         return;
 
-        
+
     }catch(err){
         console.log(err);
         throw err;
