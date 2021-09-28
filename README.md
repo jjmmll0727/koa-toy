@@ -1,7 +1,7 @@
 # koa-toy
 side-toy project based on koa framework<br>
 원하는 지역의 날씨를 골라서 볼 수 있는 나만의 프로젝트 `with docker`<br>
-날씨와 그 지역의 사진을 배경으로 한 음악 플레이리스트 -> 감성적이야
+날씨와 그 지역의 사진을 배경으로 한 음악 플레이리스트 -> 나만을 위한 감성 프로젝트
 ***
 
 > ### env setting

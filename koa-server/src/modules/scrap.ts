@@ -10,8 +10,8 @@ export async function scrap(city : String){
     AxiosInstance.get(url)
       .then( // Once we have data returned ...
         response => {
-          console.log(response)
-          return response;
+          const temp = response.data.main.temp - 273.15
+          return temp;
         }
       )
       .catch(console.error); // Error handling
