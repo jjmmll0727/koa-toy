@@ -13,7 +13,7 @@ export async function scrapNews(country : ApiNewsCountry){
     const topHeadlines = await newsapi.getTopHeadlines({
         country: country,
         pageSize: 20,
-        page: 1,
+        page: 1
     });
     return topHeadlines
 }

@@ -2,13 +2,13 @@ import Country from '../models/Country';
 import { ICountryForStore, ICountryForFind } from '../interface/ICountry';
 
 export async function register(data: ICountryForStore){
-    const country = new Country(data);
-    return country.save();
+    const countryCode = new Country(data);
+    return countryCode.save();
 }
 
 export async function findByCountry(data: ICountryForFind){
-    const {country} = data
-    return Country.findOne({country})
+    const {countryCode} = data
+    return Country.findOne({countryCode})
 }
 
 

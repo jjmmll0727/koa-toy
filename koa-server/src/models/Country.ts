@@ -5,11 +5,15 @@ const Schema = mongoose.Schema;
 
 const CountrySchema = new Schema({
 
-    country : {
+    countryCode : {
 
         type: String,
         required: true,
         unique: true
+    },
+
+    country : {
+        type: String
     }
 });
 

@@ -1,11 +1,16 @@
 export interface ICountry{
-    country : string
+    countryCode : string
 }
 
 export interface ICountryForStore{ 
-    country : string
+    countryCode : string
 }
 
 export interface ICountryForFind{
-    country : string
+    countryCode : string
+}
+
+import { ApiNewsCountry } from '../types/types';
+export interface ICountryForScrapNews{
+    countryCode : ApiNewsCountry
 }

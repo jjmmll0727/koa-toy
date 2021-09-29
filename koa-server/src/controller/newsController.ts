@@ -2,24 +2,20 @@ import Koa, { Context } from 'koa'
 import { register, findByCountry, getAll } from '../service/newsService';
 import {sign, verify} from '../modules/jwt'
 import { query, validationResults} from "koa-req-validation";
-import { ICountryForStore } from '../interface/ICountry';
+import { ICountryForFind, ICountryForStore } from '../interface/ICountry';
 import { RouterContext } from '@koa/router';
 import { scrapWeather } from '../modules/scrapWeather';
 import { scrapNews } from '../modules/scrapNews';
+import { ICountryForScrapNews } from '../interface/ICountry';
 /**
  * 
- * @param ctx province & city
+ * @param ctx countrt
  * @param next 
- * @returns store new region
+ * @returns store new country
  */
 export async function storeCountry(ctx: RouterContext, next: any){
     try{
-        //const {country} : ICountryForStore = ctx.request.body
-        const {country} = ctx.request.body
-        // country 는 일반적으로 사람들이 생각하는 나라이름 -> 실제 디비에 저장하는 이름
-        // country_code 는 2 letter country name
-        // 매핑이 필요해
-        
+        const {countryCode} : ICountryForScrapNews= ctx.request.body
         const error = validationResults(ctx);
         if(error.hasErrors()){
             ctx.status = 500;
@@ -28,7 +24,7 @@ export async function storeCountry(ctx: RouterContext, next: any){
             };
             return;
         }
-        const result = await findByCountry({country});
+        const result = await findByCountry({countryCode});
         if(result){
             ctx.body = {
                 exceptions: "",
@@ -38,9 +34,8 @@ export async function storeCountry(ctx: RouterContext, next: any){
             };
             return;
         }
-        const regions = await register({country});
-        //const weather = await scrapWeather(city);
-        const news = await scrapNews(country);
+        const regions = await register({countryCode});
+        const news = await scrapNews(countryCode);
         console.log(news)
         ctx.body = {
             exceptions: "",
