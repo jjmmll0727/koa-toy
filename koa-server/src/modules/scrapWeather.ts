@@ -2,7 +2,7 @@ import axios from 'axios';
 import cheerio from 'cheerio';
 import {apiKey} from '../../config/openWeatherMapAPI';
 
-export async function scrap(city : String){
+export async function scrapWeather(city : String){
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
     const AxiosInstance = axios.create(); // Create a new Axios Instance
     

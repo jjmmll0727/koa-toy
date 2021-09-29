@@ -13,7 +13,9 @@
     "koa": "^2.13.1",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^10.1.1",
-    "mongoose": "^6.0.7"
+    "mongoose": "^6.0.7",
+    "newsapi": "^2.4.1",
+    "ts-newsapi": "^1.0.0"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",

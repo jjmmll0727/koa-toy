@@ -64,6 +64,9 @@ press enter and enter and enter ...
 > ### skills
 ***
 1. crawling weather from [https://www.estesparkweather.net/index.php](https://www.estesparkweather.net/index.php)
+2. get worldwide news from `newsapi` [https://newsapi.org/docs/get-started#search](https://newsapi.org/docs/get-started#search)
+- how to get articles [https://www.npmjs.com/package/ts-newsapi?activeTab=readme](https://www.npmjs.com/package/ts-newsapi?activeTab=readme)
+
 
 
 ***
