@@ -1,5 +1,7 @@
 import Country from '../models/Country';
-import { ICountryForStore, ICountryForFind } from '../interface/ICountry';
+import { ICountryForStore, ICountryForFind, ICountryForScrapNews } from '../interface/ICountry';
+import { scrapNews } from '../modules/scrapNews';
+import { ApiNewsCountry } from '../types/types';
 
 export async function register(data: ICountryForStore){
     const countryCode = new Country(data);
@@ -11,9 +13,6 @@ export async function findByCountry(data: ICountryForFind){
     return Country.findOne({countryCode})
 }
 
-
-// todo: 
 export async function getAll(){
-    const regionList = await Country.find();
-    console.log(regionList);
+    return Country.find()
 }
