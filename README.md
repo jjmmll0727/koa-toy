@@ -74,8 +74,8 @@ press enter and enter and enter ... <br><br>
 
 > ### result
 
-![kr](./img/kr.png)<br>
-![us](./img/us.png)
+![kr](https://github.com/jjmmll0727/koa-toy/blob/main/koa-server/img/kr.png)<br>
+![us](https://github.com/jjmmll0727/koa-toy/blob/main/koa-server/img/us.png)
 
 ***
 
