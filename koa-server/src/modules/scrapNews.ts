@@ -18,5 +18,3 @@ export async function scrapNews(country : ApiNewsCountry){
     return topHeadlines
 }
 
-// 카테고리 추가도 가능하게 하자.
-
